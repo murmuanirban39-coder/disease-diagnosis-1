@@ -1,0 +1,125 @@
+/* static/style.css 
+
+body { font-family: Arial, sans-serif; background:#f3f6fb; margin:0; padding:20px; }
+.card { max-width:700px; margin:32px auto; background:white; padding:20px; border-radius:8px; box-shadow:0 4px 18px rgba(0,0,0,0.08); }
+h1 { margin-top:0 }
+label { display:block; margin:8px 0 }
+fieldset { margin:12px 0; padding:12px }
+.chk { display:inline-block; width:48%; margin:4px 0 }
+button { background:#007bff; color:white; padding:10px 14px; border:none; border-radius:6px }
+
+*/
+
+/* static/style.css */
+
+/* ===== GLOBAL ===== */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #a8c0ff, #3f2b96);
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* ===== CARD ===== */
+.card {
+    max-width: 750px;
+    margin: 40px auto;
+    background: #ffffffee;
+    padding: 28px;
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border: 1px solid rgba(255,255,255,0.4);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1,h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #2c3e50;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+/* ===== LABELS ===== */
+label {
+    display: block;
+    margin: 10px 0;
+    font-weight: 600;
+    color: #333;
+}
+
+/* ===== CHECKBOX SECTION ===== */
+fieldset {
+    margin: 12px 0;
+    padding: 14px 20px;
+    border-radius: 10px;
+    border: 2px solid #6a89cc;
+    background: #f5f8ff;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+    color: #34495e;
+}
+
+.chk {
+    display: inline-block;
+    width: 48%;
+    margin: 6px 0;
+    padding: 6px;
+    background: #eaf0ff;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.chk:hover {
+    background: #d6e0ff;
+}
+
+/* ===== BUTTON ===== */
+button {
+    background: linear-gradient(135deg, #6a89cc, #4b7bec);
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ===== BACK BUTTon===== */
+.btn-back {
+    display: inline-block;                  /* Makes it like a button */
+    margin-top: 20px;                       /* Space from above elements */
+    padding: 10px 20px;                     /* Size of the button */
+    background: linear-gradient(135deg, #6a89cc, #4b7bec);  /* Gradient color */
+    color: white;                            /* Text color */
+    text-decoration: none;                  /* Remove underline */
+    border-radius: 8px;                     /* Rounded corners */
+    font-weight: bold;                       /* Bold text */
+    transition: 0.3s;                       /* Smooth hover animation */
+}
+
+.btn-back:hover {
+    transform: translateY(-3px);            /* Moves button up slightly on hover */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2); /* Adds shadow on hover */
+}
+

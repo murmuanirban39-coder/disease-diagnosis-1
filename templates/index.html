@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- UTF-8 supports all languages -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title (Shown in browser tab) -->
+    <title>Disease Diagnosis System</title>
+
+    <!-- Linking external CSS from static/style.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Main container card to hold the entire content -->
+    <div class="card">
+
+        <!-- Heading / Title of the page -->
+        <h1>🩺 Disease Diagnosis from Symptoms</h1>
+
+        <!-- Form will submit data to Flask route /predict using POST method -->
+        <form action="/predict" method="POST">
+
+            <!-- PATIENT INFORMATION SECTION -->
+            <fieldset>
+                <!-- Title for this section -->
+                <legend>👤 Patient Information</legend>
+
+                <!-- Patient Name Input -->
+                <label>
+                    Name:
+                    <!-- Required means the field cannot be left empty -->
+                    <input type="text" name="name" required placeholder="Enter patient name">
+                </label>
+
+                <!-- Patient Age Input -->
+                <label>
+                    Age:
+                    <input type="number" name="age" required placeholder="Age">
+                </label>
+
+                <!-- Gender Dropdown Menu -->
+                <label>
+                    Gender:
+                    <select name="gender" required>
+                        <!-- Default empty option -->
+                        <option value="">Select gender</option>
+                        <!-- Gender choices -->
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+                </label>
+            </fieldset>
+
+            <!-- SYMPTOMS SELECTION SECTION -->
+            <fieldset>
+                <!-- Title of the symptom selection block -->
+                <legend>🦠 Select Your Symptoms</legend>
+
+                <!-- Flask Jinja loop to create checkboxes dynamically from features list -->
+                {% for symptom in features %}
+
+                    <!-- Each symptom shown as a checkbox -->
+                    <label class="chk">
+                        <!-- Checkbox input; name is the symptom (e.g. fever, headache) -->
+                        <input type="checkbox" name="{{ symptom }}">
+
+                        <!-- Display readable text: converts "high_fever" → "High Fever" -->
+                        {{ symptom.replace('_',' ').title() }}
+                    </label>
+
+                {% endfor %}
+            </fieldset>
+
+            <!-- Submit button sends form data for prediction -->
+            <button type="submit">🔍 Diagnose Disease</button>
+        </form>
+    </div>
+
+</body>
+</html>

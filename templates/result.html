@@ -1,0 +1,29 @@
+<!-- templates/result.html -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Result</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="card">
+        <h1>-: 🩺 Diagnosis Result 🩺 :-</h1>
+        <p><strong>👤 Patient:</strong> {{ name }}</p>
+        <p><strong>🦠 Predicted Disease:</strong> {{ predicted }}</p>
+        <p><strong>📊 Confidence:</strong> {{ confidence }}</p>
+
+
+        <h2>-: 💡 Suggested Recovery Steps 💡 :-</h2>
+        <p>✅ {{ suggestion }}</p>
+        <p>👤 Always visit and consult a doctor.</p>
+
+        <!-- Back Button -->
+        <a href="/" class="btn-back">⬅ Back</a>
+
+
+    </div>
+</body>
+</html>

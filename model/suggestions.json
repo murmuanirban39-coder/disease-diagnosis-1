@@ -1,0 +1,8 @@
+{
+  "Flu": "Rest, stay hydrated, paracetamol for fever, see a doctor if breathless or symptoms worsen.",
+  "Common Cold": "Rest, fluids, warm fluids, decongestant if needed, consult if symptoms last >10 days.",
+  "Gastritis": "Avoid spicy/fried food, small meals, antacids; consult for prescription if severe.",
+  "Migraine": "Dark room, NSAID (if safe), identify triggers; seek medical help if severe.",
+  "COVID-19": "Isolate, rest, fluids, monitor oxygen; seek care for breathing difficulty."
+}
+
